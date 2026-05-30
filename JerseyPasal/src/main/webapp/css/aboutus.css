@@ -1,0 +1,1650 @@
+.au-hero-section{
+    position:relative;
+    min-height:100vh;
+    background:var(--black);
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    text-align:center;
+    overflow:hidden;
+    border-bottom:1px solid #1e1e1e;
+    padding:0 40px 70px;
+}
+.au-hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    transform: scale(1);
+    filter: brightness(1.02) contrast(1.03) saturate(1.02);
+    image-rendering: auto;
+    animation: gentleZoomIn 8s ease-out forwards, slowPulse 12s ease-in-out infinite 2s;
+}
+@keyframes gentleZoomIn {
+    0% {
+        transform: scale(1.05);
+        filter: brightness(0.98) contrast(1) saturate(1);
+    }
+    100% {
+        transform: scale(1);
+        filter: brightness(1.02) contrast(1.03) saturate(1.02);
+    }
+}
+@keyframes slowPulse {
+    0%, 100% {
+        transform: scale(1);
+        filter: brightness(1.02) contrast(1.03) saturate(1.02);
+    }
+    50% {
+        transform: scale(1.02);
+        filter: brightness(1.05) contrast(1.04) saturate(1.04);
+    }
+}
+.au-hero-section::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.02),
+            rgba(0,0,0,0.12),
+            rgba(0,0,0,0.45),
+            var(--black)
+        );
+}
+
+.au-hero-content{
+    position:relative;
+    z-index:1;
+    max-width:880px;
+    width:100%;
+}
+
+.au-shop-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:13px 34px;
+    background:transparent;
+    border:1.5px solid rgba(255,255,255,0.75);
+    border-radius:50px;
+    text-decoration:none;
+    font-size:1rem;
+    font-weight:900;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:white;
+    transition:all 0.3s ease;
+    margin-bottom:20px;
+}
+
+.au-shop-btn i{
+    font-size:0.65rem;
+    transition:transform 0.3s ease;
+}
+
+.au-shop-btn:hover i{
+    transform:translate(3px,-3px);
+}
+.au-shop-btn:hover{
+    background:#ffffff;
+    color:#0a0a0a;
+    border-color:#ffffff;
+}
+
+.au-shop-btn:hover i{
+    color:#0a0a0a;
+    transform:translate(3px,-3px);
+}
+
+.au-hero-label{
+    font-size:0.72rem;
+    font-weight:900;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:var(--white);
+    margin-bottom:10px;
+}
+
+.au-hero-content h1{
+    font-size:4.6rem;
+    font-weight:900;
+    line-height:1.0;
+    letter-spacing:-1.5px;
+    text-transform:uppercase;
+    color:var(--white);
+    margin-bottom:10px;
+    white-space:nowrap;
+}
+
+.au-hero-content h1 span{
+    color:#8b0d1f;
+}
+
+.au-white-line{
+    color:var(--white) !important;
+}
+
+.au-hero-text{
+    max-width:560px;
+    margin:0 auto;
+    color:rgba(255,255,255,0.65);
+    font-size:0.88rem;
+    font-weight:500;
+    line-height:1.75;
+}
+
+.au-story-section{
+    position:relative;
+    background:var(--black);
+    padding:180px 40px 110px;
+    border-bottom:1px solid #1e1e1e;
+}
+
+.au-story-wrapper{
+    max-width:1350px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:1.25fr 0.75fr;
+    gap:70px;
+    align-items:center;
+}
+
+.au-story-text{
+    text-align:left;
+    padding-left:0;
+    margin-left:-90px;
+}
+
+.au-small-title{
+    font-size:0.82rem;
+    font-weight:900;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:#8b0d1f !important;
+    margin-bottom:28px;
+}
+.au-story-text .au-small-title{
+    font-weight:1000 !important;
+}
+
+.au-story-text h2{
+    font-size:2.4rem;
+    font-weight:950;
+    text-transform:uppercase;
+    line-height:1.08;
+    color:#ffffff;
+    margin-bottom:30px;
+}
+
+.au-story-text p{
+    max-width:680px;
+    font-size:1rem;
+    font-weight:500;
+    line-height:1.75;
+    color:rgba(255,255,255,0.65);
+}
+.au-stats-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.au-stat-card{
+    background:#151515;
+    border:1px solid rgba(255,255,255,0.06);
+    border-radius:16px;
+    min-height:180px;
+    padding:32px 24px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    transition:0.3s ease;
+}
+
+.au-stat-card:hover{
+    transform:translateY(-6px);
+    background:#1d1d1d;
+}
+
+.au-stat-card h3{
+    font-size:2.2rem;
+    font-weight:900;
+    color:#8b0d1f;
+    margin-bottom:12px;
+}
+
+.au-stat-card h3 span{
+    color:#8b0d1f;
+}
+
+.au-stat-card p{
+    font-size:0.82rem;
+    font-weight:900;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:rgba(255,255,255,0.72);
+}
+
+.au-promise-section{
+    background:linear-gradient(135deg,var(--red),#6a0917);
+    padding:60px 40px;
+    display:flex;
+    align-items:center;
+    gap:34px;
+}
+
+.au-promise-icon{
+    width:64px;
+    height:64px;
+    border:2px solid rgba(255,255,255,0.45);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--white);
+    font-size:1.6rem;
+    flex-shrink:0;
+}
+
+.au-promise-text h2{
+    font-size:2rem;
+    font-weight:900;
+    text-transform:uppercase;
+    color:var(--white);
+    margin-bottom:10px;
+}
+
+.au-promise-text p{
+    max-width:760px;
+    color:rgba(255,255,255,0.82);
+    font-size:0.88rem;
+    font-weight:500;
+    line-height:1.75;
+}
+
+.au-offer-section{
+    background:linear-gradient(180deg,#0c0c0c 0%,#090909 100%);
+    padding:120px 40px;
+    border-bottom:1px solid #1e1e1e;
+}
+
+.au-offer-section .au-heading-box{
+    text-align:left;
+    max-width:1500px;
+    margin-bottom:20px;
+    margin-left:-5px;
+}
+
+.au-heading-box .au-small-title{
+    font-size:0.85rem;
+    font-weight:900;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:#8b0d1f !important;
+    margin-bottom:22px;
+}
+
+.au-heading-box h2{
+    font-size:2.5rem;
+    font-weight:900;
+    text-transform:uppercase;
+    line-height:1.08;
+    color:#ffffff;
+    margin:0;
+    max-width:850px;
+}
+
+.au-offer-grid{
+    max-width:1480px;
+    margin:0 auto 0 20px;
+    display:grid;
+    grid-template-columns:repeat(5,minmax(260px,1fr));
+    gap:24px;
+}
+
+.au-offer-card{
+    position:relative;
+    background:linear-gradient(180deg,#171717 0%,#111111 100%);
+    border:1px solid rgba(255,255,255,0.06);
+    border-radius:26px;
+    padding:40px 30px;
+    overflow:hidden;
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.au-offer-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:4px;
+    background:#8b0d1f;
+}
+
+.au-offer-card:hover{
+    transform:translateY(-10px);
+    border-color:rgba(139,13,31,0.55);
+    background:linear-gradient(180deg,#1d1d1d 0%,#151515 100%);
+    box-shadow:
+        0 18px 38px rgba(0,0,0,0.42),
+        0 0 18px rgba(139,13,31,0.14);
+}
+
+.au-offer-card i{
+    width:85px;
+    height:85px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:22px;
+    background:rgba(139,13,31,0.12);
+    color:#ffffff;
+    font-size:2.3rem;
+    margin-bottom:30px;
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease;
+}
+
+.au-offer-card:hover i{
+    background:#8b0d1f;
+    transform:translateY(-4px);
+}
+
+.au-offer-card h3{
+    font-size:0.95rem;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:#ffffff;
+    line-height:1.45;
+    margin-bottom:17px;
+}
+
+.au-offer-card p{
+    font-size:0.84rem;
+    font-weight:500;
+    line-height:1.6;
+    color:rgba(255,255,255,0.72);
+    margin:0;
+}
+.home-content-area .home-section {
+    padding: 6rem 5%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.home-content-area .home-sec-title {
+    font-size: 3.2rem;
+    font-weight: 800;
+    margin-bottom: 1.2rem;
+    letter-spacing: -0.5px;
+    text-align: center;
+}
+
+.home-content-area .home-sec-title i {
+    margin-right: 12px;
+    color: #8b0d1f;
+}
+
+.home-content-area .home-sec-sub {
+    font-size: 1.2rem;
+    color: #aaa;
+    margin-bottom: 3.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.home-content-area .home-why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 2.5rem;
+    width: 100%;
+}
+
+.home-content-area .home-why-card {
+    background: linear-gradient(135deg, #1a1a1a, #111);
+    padding: 2.5rem;
+    border-radius: 24px;
+    border: 1px solid #222;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.home-content-area .home-why-card:hover {
+    transform: translateY(-8px);
+    border-color: #8b0d1f;
+    box-shadow: 0 15px 35px rgba(139, 13, 31, 0.15);
+}
+
+.home-content-area .home-why-icon {
+    font-size: 3rem;
+    color: #8b0d1f;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+}
+
+.home-content-area .home-why-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.home-content-area .home-why-card p {
+    color: #bbb;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.home-content-area .home-timeline {
+    position: relative;
+    padding: 2.5rem 0;
+}
+
+.home-content-area .home-timeline::before {
+    content: '';
+    position: absolute;
+    left: 500px;
+    transform: translateX(0);
+    width: 4px;
+    height: 100%;
+    background: #8b0d1f;
+}
+
+.home-content-area .home-timeline-item {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 2.5rem;
+    position: relative;
+    padding-left: 530px;
+}
+
+.home-content-area .home-timeline-date {
+    width: auto;
+    min-width: 100px;
+    text-align: left;
+    padding-right: 2rem;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #8b0d1f;
+}
+
+.home-content-area .home-timeline-content {
+    width: calc(100% - 120px);
+    background: #1a1a1a;
+    padding: 1.5rem 2rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #bbb;
+}
+
+.home-content-area .home-timeline-content h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.home-content-area .home-timeline-content h3 i {
+    color: #8b0d1f;
+    margin-right: 8px;
+}
+
+.home-content-area .home-timeline-content p {
+    margin: 0;
+}
+
+.home-content-area .home-timeline-dot {
+    position: absolute;
+    left: 492px;
+    transform: translateX(0);
+    width: 16px;
+    height: 16px;
+    background: #8b0d1f;
+    border-radius: 50%;
+    top: 20px;
+}
+
+
+@media (max-width: 1400px) {
+    .home-content-area .home-timeline::before {
+        left: 400px;
+    }
+    .home-content-area .home-timeline-item {
+        padding-left: 430px;
+    }
+    .home-content-area .home-timeline-dot {
+        left: 392px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .home-content-area .home-timeline::before {
+        left: 300px;
+    }
+    .home-content-area .home-timeline-item {
+        padding-left: 330px;
+    }
+    .home-content-area .home-timeline-dot {
+        left: 292px;
+    }
+    .home-content-area .home-timeline-date {
+        font-size: 1.3rem;
+        min-width: 90px;
+    }
+    .home-content-area .home-timeline-content {
+        width: calc(100% - 100px);
+        padding: 1.2rem 1.8rem;
+    }
+    .home-content-area .home-timeline-content h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .home-content-area .home-timeline::before {
+        left: 30px;
+    }
+    .home-content-area .home-timeline-item {
+        flex-direction: column;
+        padding-left: 60px;
+    }
+    .home-content-area .home-timeline-date {
+        width: 100%;
+        text-align: left;
+        padding-left: 0;
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+    }
+    .home-content-area .home-timeline-content {
+        width: 100%;
+        padding: 1rem 1.5rem;
+    }
+    .home-content-area .home-timeline-dot {
+        left: 22px;
+        top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-content-area .home-timeline {
+        padding: 1.5rem 0;
+    }
+    .home-content-area .home-timeline-item {
+        margin-bottom: 1.8rem;
+        padding-left: 55px;
+    }
+    .home-content-area .home-timeline::before {
+        left: 25px;
+    }
+    .home-content-area .home-timeline-dot {
+        left: 17px;
+        width: 14px;
+        height: 14px;
+    }
+    .home-content-area .home-timeline-date {
+        font-size: 1rem;
+        min-width: auto;
+    }
+    .home-content-area .home-timeline-content {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    .home-content-area .home-timeline-content h3 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .home-content-area .home-timeline-item {
+        padding-left: 50px;
+        margin-bottom: 1.5rem;
+    }
+    .home-content-area .home-timeline::before {
+        left: 20px;
+    }
+    .home-content-area .home-timeline-dot {
+        left: 12px;
+        width: 12px;
+        height: 12px;
+        top: 16px;
+    }
+    .home-content-area .home-timeline-date {
+        font-size: 0.9rem;
+    }
+    .home-content-area .home-timeline-content {
+        padding: 0.7rem 1rem;
+        font-size: 0.85rem;
+    }
+    .home-content-area .home-timeline-content h3 {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-content-area .home-timeline-item {
+        padding-left: 45px;
+        margin-bottom: 1.2rem;
+    }
+    .home-content-area .home-timeline::before {
+        left: 18px;
+    }
+    .home-content-area .home-timeline-dot {
+        left: 10px;
+        width: 10px;
+        height: 10px;
+        top: 14px;
+    }
+    .home-content-area .home-timeline-date {
+        font-size: 0.85rem;
+    }
+    .home-content-area .home-timeline-content {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    .home-content-area .home-timeline-content h3 {
+        font-size: 0.85rem;
+    }
+}
+.au-why-section{
+    background:linear-gradient(180deg,#0d0d0d 0%,#090909 100%);
+    padding:120px 40px;
+    border-bottom:1px solid #1e1e1e;
+}
+.au-why-section .au-heading-box{
+    max-width:1500px;
+    margin:0 auto 75px;
+    text-align:left;
+    padding-left:0;
+    margin-left:60px;
+}
+
+.au-heading-box .au-small-title{
+    font-size:1.3rem !important;
+    font-weight:700;
+    letter-spacing:1px;
+}
+.au-why-grid{
+    max-width:1500px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(5,minmax(250px,1fr));
+    gap:24px;
+}
+
+.au-why-card{
+    position:relative;
+    background:linear-gradient(180deg,#171717 0%,#111111 100%);
+    border:1px solid rgba(255,255,255,0.06);
+    border-radius:24px;
+    padding:36px 30px;
+    overflow:hidden;
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.au-why-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:4px;
+    background:#8b0d1f;
+}
+
+.au-why-card:hover{
+    transform:translateY(-10px);
+    border-color:rgba(139,13,31,0.55);
+    background:linear-gradient(180deg,#1c1c1c 0%,#151515 100%);
+    box-shadow:
+        0 18px 38px rgba(0,0,0,0.42),
+        0 0 18px rgba(139,13,31,0.14);
+}
+
+.au-card-number{
+    display:block;
+    font-size:2.2rem;
+    font-weight:900;
+    color:#8b0d1f;
+    line-height:1.2;
+    margin-bottom:26px;
+    letter-spacing:1px;
+}
+
+.au-why-card h3{
+    font-size:0.82rem;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:#ffffff;
+    margin-bottom:16px;
+    line-height:1.4;
+}
+
+.au-why-card p{
+    font-size:1.1rem;
+    font-weight:500;
+    line-height:1.5;
+    color:rgba(255,255,255,0.72);
+    margin:0;
+}
+
+.au-team-section{
+    background:var(--black);
+    padding:110px 40px;
+    border-bottom:1px solid #1e1e1e;
+}
+
+.au-team-section .au-heading-box{
+    max-width:1600px;
+    margin:0 auto 70px;
+    text-align:left;
+}
+.au-team-section .au-small-title{
+    font-size:1.3rem !important;
+    font-weight:700;
+    letter-spacing:1px;
+}
+.au-team-grid{
+    max-width:1600px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(5,minmax(280px,1fr));
+    gap:24px;
+    align-items:stretch;
+}
+
+.au-team-card{
+    background:#171717;
+    border:1px solid rgba(255,255,255,0.06);
+    border-radius:24px;
+    padding:34px 30px;
+    min-height:320px;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.au-team-card:hover{
+    transform:translateY(-8px);
+    background:#1d1d1d;
+    border-color:#8b0d1f;
+    box-shadow:0 14px 30px rgba(0,0,0,0.35);
+}
+
+.au-team-image{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    overflow:hidden;
+    border:2px solid #8b0d1f;
+    margin-bottom:24px;
+}
+
+.au-team-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.au-team-card:nth-child(1) .au-team-image img{
+    object-position:center top;
+}
+.au-team-card h3{
+    font-size:1.2rem;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:#ffffff;
+    margin-bottom:8px;
+}
+
+.au-team-role{
+    display:block;
+    color:#8b0d1f !important;
+    font-size:0.72rem;
+    font-weight:900;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    margin-bottom:18px !important;
+}
+.au-team-card p{
+    width:100%;
+    max-width:none;
+    color:rgba(255,255,255,0.74);
+    font-size:1rem;
+    font-weight:500;
+    line-height:1.7;
+    margin:0;
+
+    text-align:left;
+}
+
+.au-bottom-section{
+    background:linear-gradient(135deg,var(--red),#6a0917);
+    padding:90px 40px;
+    text-align:center;
+}
+
+.au-bottom-section h2{
+    font-size:2rem;
+    font-weight:900;
+    text-transform:uppercase;
+    margin-bottom:18px;
+}
+
+.au-bottom-section p{
+    color:rgba(255,255,255,0.82);
+    font-size:0.88rem;
+    font-weight:500;
+    margin-bottom:34px;
+}
+
+.au-bottom-section a{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    padding:13px 34px;
+    background:#ffffff;
+    color:#8b0d1f;
+    border:2px solid transparent;
+    border-radius:50px;
+    text-decoration:none;
+    font-size:0.82rem;
+    font-weight:900;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    transition:all 0.3s ease;
+    box-shadow:0 10px 28px rgba(0,0,0,0.18);
+}
+.au-contact-white-btn:hover{
+    background:#8b0d1f;
+    color:#ffffff;
+    border-color:#ffffff;
+}
+
+.au-contact-white-btn:hover i{
+    color:#ffffff;
+    transform:translate(3px,-3px);
+}
+@media (max-width: 1400px) {
+    .au-offer-grid,
+    .au-why-grid,
+    .au-team-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+    
+    .au-hero-image {
+        object-position: center 25%;
+    }
+}
+
+@media (max-width: 1300px) {
+    .au-story-wrapper {
+        gap: 50px;
+    }
+    .au-story-text {
+        margin-left: -30px;
+    }
+    .au-offer-grid,
+    .au-why-grid,
+    .au-team-grid {
+        gap: 20px;
+    }
+    .au-offer-card,
+    .au-why-card,
+    .au-team-card {
+        padding: 30px 24px;
+    }
+    .au-hero-image {
+        object-position: center 30%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .au-offer-grid,
+    .au-why-grid,
+    .au-team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .au-hero-content h1 {
+        font-size: 3.8rem;
+        white-space: normal;
+    }
+    .au-story-text {
+        margin-left: 0;
+    }
+    .au-story-text h2 {
+        font-size: 2.2rem;
+    }
+    .au-hero-image {
+        object-position: center 35%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .au-offer-grid,
+    .au-why-grid,
+    .au-team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .au-heading-box h2 {
+        font-size: 2.8rem;
+    }
+    .au-story-wrapper {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    .au-story-text {
+        margin-left: 0;
+        text-align: center;
+    }
+    .au-story-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .au-stats-grid {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .au-hero-content h1 {
+        font-size: 3.2rem;
+        white-space: normal;
+    }
+    .au-story-section {
+        padding: 120px 30px 90px;
+    }
+    .au-story-wrapper {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    .au-story-text {
+        margin-left: 0;
+        text-align: center;
+    }
+    .au-story-text h2 {
+        font-size: 2.2rem;
+    }
+    .au-offer-grid,
+    .au-why-grid,
+    .au-team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .au-offer-section .au-heading-box {
+        transform: none;
+    }
+    .au-why-section .au-heading-box {
+        margin-left: 0;
+        text-align: center;
+    }
+    .au-team-section .au-heading-box {
+        text-align: center;
+    }
+    .au-heading-box {
+        text-align: center;
+    }
+    .au-hero-image {
+        object-position: center 30%;
+    }
+}
+
+@media (max-width: 992px) {
+    .au-hero-section {
+        min-height: 80vh;
+        padding: 0 30px 60px;
+    }
+    .au-hero-content h1 {
+        font-size: 3rem;
+        white-space: normal;
+    }
+    .au-hero-text {
+        font-size: 0.9rem;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    .au-story-section {
+        padding: 100px 30px 80px;
+    }
+    .au-story-text h2 {
+        font-size: 2rem;
+    }
+    .au-story-text p {
+        font-size: 0.95rem;
+    }
+    .au-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    .au-stat-card {
+        min-height: 160px;
+        padding: 28px 20px;
+    }
+    .au-stat-card h3 {
+        font-size: 2rem;
+    }
+    .au-offer-section,
+    .au-why-section,
+    .au-team-section {
+        padding: 90px 30px;
+    }
+    .au-offer-grid,
+    .au-why-grid,
+    .au-team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .au-offer-card,
+    .au-why-card,
+    .au-team-card {
+        padding: 30px 24px;
+    }
+    .au-heading-box h2 {
+        font-size: 2.4rem;
+    }
+    .au-promise-section {
+        padding: 50px 30px;
+        gap: 25px;
+    }
+    .au-promise-text h2 {
+        font-size: 1.8rem;
+    }
+    .au-promise-text p {
+        font-size: 0.85rem;
+    }
+    .au-bottom-section {
+        padding: 70px 30px;
+    }
+    .au-bottom-section h2 {
+        font-size: 1.8rem;
+    }
+    .au-hero-image {
+        object-position: center 25%;
+        animation: none;
+    }
+    @keyframes gentleZoomIn {
+        0% {
+            transform: scale(1);
+            filter: brightness(0.98) contrast(1) saturate(1);
+        }
+        100% {
+            transform: scale(1);
+            filter: brightness(1.02) contrast(1.03) saturate(1.02);
+        }
+    }
+    @keyframes slowPulse {
+        0%, 100% {
+            transform: scale(1);
+            filter: brightness(1.02) contrast(1.03) saturate(1.02);
+        }
+        50% {
+            transform: scale(1);
+            filter: brightness(1.03) contrast(1.04) saturate(1.04);
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .au-offer-section,
+    .au-why-section,
+    .au-team-section {
+        padding: 80px 30px;
+    }
+    .au-offer-grid,
+    .au-why-grid,
+    .au-team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .au-heading-box h2 {
+        font-size: 2.4rem;
+    }
+    .au-team-image {
+        width: 130px;
+        height: 130px;
+    }
+    .au-heading-box {
+        padding-left: 0;
+    }
+    .au-hero-content h1 {
+        font-size: 2.8rem;
+    }
+    .au-story-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .au-promise-section {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 800px) {
+    .au-hero-section {
+        min-height: 70vh;
+        padding: 0 20px 50px;
+    }
+    .au-hero-content h1 {
+        font-size: 2.6rem;
+        white-space: normal;
+    }
+    .au-hero-label {
+        font-size: 0.65rem;
+        letter-spacing: 2.5px;
+    }
+    .au-shop-btn {
+        padding: 12px 28px;
+        font-size: 0.85rem;
+    }
+    .au-story-text h2 {
+        font-size: 1.8rem;
+    }
+    .au-small-title {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .au-hero-section {
+        min-height: 700px;
+        padding: 0 24px 50px;
+    }
+    .au-hero-content h1 {
+        font-size: 2.6rem;
+        line-height: 1.1;
+        white-space: normal;
+    }
+    .au-hero-text {
+        font-size: 0.85rem;
+        max-width: 100%;
+    }
+    .au-shop-btn {
+        padding: 12px 26px;
+        font-size: 0.75rem;
+    }
+    .au-story-text h2,
+    .au-heading-box h2 {
+        font-size: 2rem;
+    }
+    .au-promise-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .au-promise-text h2 {
+        font-size: 1.7rem;
+    }
+    .au-offer-grid,
+    .au-why-grid,
+    .au-team-grid {
+        grid-template-columns: 1fr;
+    }
+    .au-team-card {
+        min-height: auto;
+    }
+    .au-team-image {
+        width: 100px;
+        height: 100px;
+    }
+    .au-stats-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .au-stat-card {
+        min-height: auto;
+        padding: 25px 20px;
+    }
+    .au-hero-image {
+        object-position: center 20%;
+    }
+    .au-story-section {
+        padding: 80px 20px 60px;
+    }
+    .au-offer-section,
+    .au-why-section,
+    .au-team-section {
+        padding: 70px 20px;
+    }
+    .au-heading-box {
+        margin-bottom: 40px;
+    }
+    .au-heading-box .au-small-title {
+        font-size: 0.7rem !important;
+        letter-spacing: 3px;
+    }
+}
+
+@media (max-width: 700px) {
+    .au-offer-section,
+    .au-why-section,
+    .au-team-section {
+        padding: 60px 20px;
+    }
+    .au-heading-box {
+        margin-bottom: 40px;
+        padding-left: 0;
+    }
+    .au-heading-box .au-small-title {
+        font-size: 0.7rem;
+        letter-spacing: 4px;
+        margin-bottom: 12px;
+    }
+    .au-heading-box h2 {
+        font-size: 1.8rem;
+    }
+    .au-offer-grid,
+    .au-why-grid,
+    .au-team-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .au-offer-card,
+    .au-why-card,
+    .au-team-card {
+        padding: 24px 20px;
+    }
+    .au-offer-card i {
+        font-size: 2.2rem;
+    }
+    .au-card-number {
+        font-size: 2.5rem;
+    }
+    .au-team-image {
+        width: 120px;
+        height: 120px;
+    }
+    .au-hero-section {
+        min-height: 560px;
+        padding: 0 24px 36px;
+    }
+    .au-hero-content h1 {
+        font-size: 2.4rem;
+        letter-spacing: 2px;
+    }
+    .au-story-section,
+    .au-offer-section,
+    .au-why-section,
+    .au-team-section,
+    .au-bottom-section {
+        padding: 64px 24px;
+    }
+    .au-promise-section {
+        padding: 50px 24px;
+        flex-direction: column;
+    }
+    .au-stats-grid,
+    .au-offer-grid,
+    .au-why-grid,
+    .au-team-grid {
+        grid-template-columns: 1fr;
+    }
+    .au-bottom-section h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .au-hero-section {
+        min-height: 620px;
+    }
+    .au-hero-content h1 {
+        font-size: 2.2rem;
+        white-space: normal;
+    }
+    .au-hero-text {
+        font-size: 0.85rem;
+        line-height: 1.7;
+    }
+    .au-story-section,
+    .au-offer-section,
+    .au-why-section,
+    .au-team-section,
+    .au-bottom-section {
+        padding: 55px 18px;
+    }
+    .au-story-text h2,
+    .au-heading-box h2 {
+        font-size: 1.7rem;
+        line-height: 1.2;
+    }
+    .au-offer-card,
+    .au-why-card,
+    .au-team-card {
+        border-radius: 18px;
+    }
+    .au-stat-card {
+        min-height: 150px;
+        padding: 24px 18px;
+    }
+    .au-stat-card h3 {
+        font-size: 1.8rem;
+    }
+    .au-team-image {
+        width: 90px;
+        height: 90px;
+    }
+    .au-hero-image {
+        object-position: center 15%;
+    }
+    .au-shop-btn {
+        padding: 10px 24px;
+        font-size: 0.7rem;
+        width: auto;
+        min-width: 180px;
+    }
+    .au-story-text p {
+        font-size: 0.85rem;
+    }
+    .au-promise-text h2 {
+        font-size: 1.5rem;
+    }
+    .au-promise-text p {
+        font-size: 0.8rem;
+    }
+    .au-bottom-section h2 {
+        font-size: 1.5rem;
+    }
+    .au-bottom-section p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .au-offer-section,
+    .au-why-section,
+    .au-team-section {
+        padding: 50px 16px;
+    }
+    .au-heading-box h2 {
+        font-size: 1.5rem;
+    }
+    .au-offer-card h3,
+    .au-why-card h3,
+    .au-team-card h3 {
+        font-size: 1rem;
+    }
+    .au-offer-card p,
+    .au-why-card p,
+    .au-team-card p {
+        font-size: 0.78rem;
+    }
+    .au-hero-content h1 {
+        font-size: 2rem;
+        white-space: normal;
+    }
+    .au-hero-label,
+    .au-small-title {
+        font-size: 0.6rem;
+        letter-spacing: 2.5px;
+    }
+    .au-shop-btn {
+        padding: 10px 22px;
+        font-size: 0.65rem;
+        min-width: 160px;
+    }
+    .au-story-text h2,
+    .au-heading-box h2 {
+        font-size: 1.5rem;
+    }
+    .au-bottom-section h2 {
+        font-size: 1.5rem;
+    }
+    .au-hero-image {
+        object-position: center 10%;
+        filter: brightness(1) contrast(1.05) saturate(1.05);
+    }
+    .au-hero-section::after {
+        background: linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.05),
+            rgba(0,0,0,0.2),
+            rgba(0,0,0,0.6),
+            var(--black)
+        );
+    }
+    .au-stat-card h3 {
+        font-size: 1.6rem;
+    }
+    .au-stat-card p {
+        font-size: 0.7rem;
+    }
+    .au-card-number {
+        font-size: 2rem;
+    }
+    .au-offer-card i {
+        width: 70px;
+        height: 70px;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 380px) {
+    .au-hero-content h1 {
+        font-size: 1.8rem;
+        white-space: normal;
+    }
+    .au-story-text h2,
+    .au-heading-box h2,
+    .au-bottom-section h2 {
+        font-size: 1.3rem;
+    }
+    .au-small-title,
+    .au-hero-label {
+        font-size: 0.58rem;
+        letter-spacing: 2px;
+    }
+    .au-offer-card,
+    .au-why-card,
+    .au-team-card {
+        padding: 20px 16px;
+    }
+    .au-offer-card h3,
+    .au-why-card h3,
+    .au-team-card h3 {
+        font-size: 0.92rem;
+    }
+    .au-offer-card p,
+    .au-why-card p,
+    .au-team-card p {
+        font-size: 0.76rem;
+        line-height: 1.6;
+    }
+    .au-team-image {
+        width: 82px;
+        height: 82px;
+    }
+    .au-shop-btn {
+        width: 100%;
+        min-width: auto;
+    }
+    .au-hero-content h1 br {
+        display: none;
+    }
+    .au-hero-text {
+        font-size: 0.75rem;
+    }
+    .au-story-text p {
+        font-size: 0.8rem;
+    }
+    .au-promise-text h2 {
+        font-size: 1.3rem;
+    }
+    .au-promise-text p {
+        font-size: 0.75rem;
+    }
+    .au-stat-card {
+        padding: 20px 15px;
+    }
+    .au-stat-card h3 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .au-hero-content h1 {
+        font-size: 1.5rem;
+    }
+    .au-hero-label {
+        font-size: 0.5rem;
+        letter-spacing: 1.5px;
+    }
+    .au-shop-btn {
+        padding: 8px 18px;
+        font-size: 0.6rem;
+    }
+    .au-story-text h2 {
+        font-size: 1.2rem;
+    }
+    .au-heading-box h2 {
+        font-size: 1.2rem;
+    }
+    .au-offer-card,
+    .au-why-card,
+    .au-team-card {
+        padding: 16px 12px;
+    }
+    .au-offer-card h3,
+    .au-why-card h3 {
+        font-size: 0.85rem;
+    }
+    .au-team-image {
+        width: 70px;
+        height: 70px;
+    }
+    .au-team-card h3 {
+        font-size: 0.9rem;
+    }
+    .au-team-role {
+        font-size: 0.6rem;
+    }
+    .au-stat-card h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 1921px) {
+    .au-hero-image {
+        object-position: center 20%;
+    }
+    .au-heading-box {
+        max-width: 1600px;
+        padding-left: 80px;
+    }
+    .au-offer-grid,
+    .au-why-grid,
+    .au-team-grid {
+        max-width: 1600px;
+        padding-left: 80px;
+        padding-right: 80px;
+        margin: 0 auto;
+    }
+    .au-hero-content h1 {
+        font-size: 5.5rem;
+    }
+    .au-hero-text {
+        font-size: 1rem;
+        max-width: 700px;
+    }
+    .au-story-text h2 {
+        font-size: 3rem;
+    }
+    .au-heading-box h2 {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 1600px) and (max-width: 1920px) {
+    .au-heading-box {
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 40px;
+    }
+    .au-offer-grid,
+    .au-why-grid,
+    .au-team-grid {
+        padding-left: 40px;
+        padding-right: 40px;
+        margin: 0 auto;
+    }
+    .au-hero-image {
+        object-position: center 20%;
+    }
+}
+
+@media (max-height: 700px) and (min-width: 768px) {
+    .au-hero-section {
+        min-height: 90vh;
+    }
+    .au-hero-content h1 {
+        font-size: 3rem;
+    }
+    .au-hero-text {
+        font-size: 0.85rem;
+    }
+    .au-shop-btn {
+        padding: 10px 28px;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 900px) {
+    .au-hero-section {
+        min-height: 100vh;
+    }
+    .au-hero-content h1 {
+        font-size: 2rem;
+    }
+    .au-hero-text {
+        font-size: 0.75rem;
+        max-width: 70%;
+    }
+    .au-shop-btn {
+        padding: 8px 20px;
+        font-size: 0.65rem;
+    }
+    .au-offer-grid,
+    .au-why-grid,
+    .au-team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .au-stat-card {
+        min-height: auto;
+        padding: 15px;
+    }
+    .au-stat-card h3 {
+        font-size: 1.4rem;
+    }
+}
